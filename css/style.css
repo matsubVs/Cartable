@@ -1,0 +1,57 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.head-form__input, .bottom-form__input {
+    margin-right: 20px;
+}
+
+.form__item {
+    margin-bottom: 30px;
+}
+
+.table-wrapper {
+    border: 3px solid lightgray;
+}
+
+.table {
+    background-color: #263238;
+    color: white;
+}
+
+.table-head {
+    table-layout: fixed;
+    width: 100%;
+    color: black;
+    border-collapse: collapse;
+}
+
+.table__head th {
+    text-align: left;
+}
+
+.table__head th:nth-child(1) {
+    width: 10%;
+}
+
+.table__head th:nth-child(2) {
+    width: 40%;
+}
+
+.table__head th:nth-child(3) {
+    width: 20%;
+}
+
+.table__head th:nth-child(4) {
+    width: 30%;
+}
+
+th, td {
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+td {
+    border-bottom: 1px solid#616161;
+}

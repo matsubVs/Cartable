@@ -2,6 +2,10 @@ html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.d-none {
+    display: none;
+}
+
 
 .head-form__input, .bottom-form__input {
     margin-right: 20px;

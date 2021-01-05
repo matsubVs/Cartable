@@ -57,13 +57,10 @@ const filterRows = carInfo => {
         dnone.forEach(item => item.classList.remove('d-none'));
     }
     
-    const filterCarInfo = carInfo.map((item, index) => {
-        if (item !== '') {
-            return [item, index];
-        }
-    }).filter(item => item);
+    const filterCarInfo = carInfo.map((item, index) => [item, index]);
 
     const tbodyChildrens = [...tbody.children];
+
     tbodyChildrens.forEach(item => {
 
         const itemChildrens = [...item.children];
@@ -71,12 +68,9 @@ const filterRows = carInfo => {
         let flag = true;
 
         itemChildrens.forEach((value, index) => {
-
-            if (filterCarInfo[index] && (filterCarInfo[index][1] === index)) {
-
+            if (filterCarInfo[index][1] === index) {
                 if (value.textContent.includes(filterCarInfo[index][0]) && flag) {
                     item.classList.remove('d-none');
-
                 } else {
                     flag = false;
                     item.classList.add('d-none');
@@ -91,7 +85,6 @@ const sortRows = target => {
     const clickedRow = childrens.map((item, index) => item === target ? index : false).filter(item => item !== false);
 
     const rows = [...tbody.querySelectorAll('tr')].map(item => [...item.children]);
-    console.log(rows);
 
     rows.sort((a, b) => a[clickedRow].textContent.localeCompare(b[clickedRow].textContent));
     
@@ -108,8 +101,6 @@ const sortRows = target => {
 
         return outputRows;
     };
-
-    console.log(rows);
 
     render(formattedRows(rows));
 };
